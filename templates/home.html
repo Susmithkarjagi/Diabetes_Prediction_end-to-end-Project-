@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML API - Diabetes Prediction</title>
+    <!-- Add the Bootstrap CSS link here -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .login {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <h1>Diabetes Prediction</h1>
+            <form action="{{ url_for('predict_datapoint')}}" method="post">
+                <input type="text" class="form-control" name="Pregnancies" placeholder="Pregnancies" required>
+                <input type="text" class="form-control" name="Glucose" placeholder="Glucose" required>
+                <input type="text" class="form-control" name="BloodPressure" placeholder="BloodPressure" required>
+                <input type="text" class="form-control" name="SkinThickness" placeholder="SkinThickness" required>
+                <input type="text" class="form-control" name="Insulin" placeholder="Insulin" required>
+                <input type="text" class="form-control" name="BMI" placeholder="BMI" required>
+                <input type="text" class="form-control" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required>
+                <input type="text" class="form-control" name="Age" placeholder="Age" required>
+                <button type="submit" class="btn btn-primary btn-block">Predict</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div>{{ result }}</div>
+    </div>
+
+    <!-- Add the Bootstrap JS and Popper.js scripts if needed -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+</body>
+</html>
+

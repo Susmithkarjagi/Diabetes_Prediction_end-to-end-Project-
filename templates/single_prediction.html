@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        .result-message {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .result-person {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4caf50; /* Green color */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result-container">
+        <h1>Person is:</h1>
+        <div class="result-person">{{ result }}</div>
+        <p class="result-message">This is your result message or additional information.</p>
+    </div>
+</body>
+
+</html>
